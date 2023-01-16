@@ -1,8 +1,3 @@
-//
-//misc.j その他、共通関数
-//
-
-//キーボードが押されたとき
 document.addEventListener('keydown',e =>{
     switch(e.code){
         case 'KeyA':keyb.Left = true;
@@ -22,7 +17,6 @@ document.addEventListener('keydown',e =>{
     }
 });
 
-//キーボードが離されたとき
 document.addEventListener('keyup',e =>{
     switch(e.code){
         case 'KeyA':keyb.Left = false;
@@ -42,7 +36,6 @@ document.addEventListener('keyup',e =>{
     }
 });
 
-//星クラス
 class Star{
     constructor()
     {
@@ -59,7 +52,6 @@ class Star{
         }
 }
 
-//キャラクターのベースのクラス
 class CharaBase{
     constructor( snum,x,y,vx,vy ){
         this.sn = snum;
@@ -82,7 +74,6 @@ class CharaBase{
     }
 }
 
-//スプライト描画
 function drawSprite(snum, x, y){
     let sx = sprite[snum].x;
     let sy = sprite[snum].y;
@@ -95,14 +86,11 @@ function drawSprite(snum, x, y){
     con.drawImage(spriteImage, sx,sy,sw,sh,px,py,sw,sh);
 }
 
-//乱数生成
 function random(min,max){
     return Math.floor(Math.random()*(max-min+1) )+min;
 }
 
-//当たり判定
 function checkHit( x1,y1,r1, x2,y2,r2){
-//円同士の当たり判定
 let a =(x2-x1)>>8;
 let b =(y2-y1)>>8;
 let r =r1+r2;
