@@ -1,8 +1,4 @@
-//
-//touhutyan.js とうふちゃん関連
-//
 
-//大豆クラス
 class Daizu extends CharaBase{
     constructor( x,y,vx,vy ){
         super( 1,x,y,vx,vy );
@@ -35,7 +31,6 @@ class Daizu extends CharaBase{
     }
 }
 
-//とうふちゃんクラス
 class Touhuchan{
     constructor(){
         this.x = (SCREEN_W/2)<<8;
